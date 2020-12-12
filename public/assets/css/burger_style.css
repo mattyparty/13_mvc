@@ -1,0 +1,10 @@
+body {
+  background-color: aqua;
+}
+
+.ul__element {
+  display: inline-block;
+}
+li {
+  margin: 10px 0;
+}

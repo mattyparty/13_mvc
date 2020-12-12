@@ -1,13 +1,26 @@
 $(function () {
-  //Click event for adding a burger.
+  //Click event to eat a burger.
+  $(".devoure-burger").on("click", function (event) {
+    console.log("click working");
+    var id = $(this).data("id");
+
+    // Send the DELETE request using ajax.
+    $.ajax("/api/burgers/" + id, {
+      type: "PUT",
+    }).then(function () {
+      console.log("devoured burger", id);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  });
   $(".create-form").on("submit", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
+    console.log("submit button hit");
 
     //Grab burger name from form field.
-    //When user submits burger name, set devoured state to false.
     var newBurger = {
-      burger_name: $("#burgerToGo").val().trim(),
+      burger_name: $("#newBurger").val().trim(),
       devoured: 0,
     };
 
@@ -17,41 +30,7 @@ $(function () {
       data: newBurger,
     }).then(function () {
       console.log("created new burger");
-      // Reload the page to get the updated list
-      location.reload();
-    });
-  });
-
-  //Click event to throw away/delete burger.
-  //   $(".delete-burger").on("click", function (event) {
-  //     var id = $(this).data("id");
-
-  //     // Send the DELETE request using ajax.
-  //     $.ajax("/api/burgers/" + id, {
-  //       type: "DELETE",
-  //     }).then(function () {
-  //       console.log("deleted burger", id);
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     });
-  //   });
-
-  //Click event for "Devour me" button.
-  $(".change-devour").on("click", function (event) {
-    var id = $(this).data("id");
-    var newDevour = $(this).data("newdevour");
-
-    var newDevourState = {
-      devoured: "true",
-    };
-
-    // Send the PUT request using ajax.
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
-      data: newDevourState,
-    }).then(function () {
-      console.log("changed devour to", newDevour);
-      // Reload the page to get the updated list
+      // Reload page
       location.reload();
     });
   });

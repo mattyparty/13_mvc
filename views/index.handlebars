@@ -1,35 +1,51 @@
-<h1>Burgers</h1>
 
-<h2>Devoured Burgers</h2>
 
+<div class = "container">
+  <div class="jumbotron">
+  <h1>Burgers</h1>
+  </div>
+
+  <div class = "row">
+    <div class="col-md-6 col-sm-12">
+    <h2>Devoured Burgers</h2>
 <ul>
+  
   {{#each burger_name}}
   {{#if devoured}}
+  <li>
   {{burger_name}}
+  </li>
   {{/if}}
   {{/each}}
+ 
 </ul>
-
+</div>
+<div class="col-md-6 col-sm-12">
 <h2>Not Devoured Burgers</h2>
 
 <ul>
+
   {{#each burger_name}}
   {{#unless devoured}}
   
    {{> burgers/burger-devoured devoured=true}}
+  
   {{/unless}}
   {{/each}}
+  
 </ul>
-
+</div>
+</div>
 <h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="newBurger" name="name">
   </div>
 
   
 
   <button type="submit">Add A Burger</button>
 </form>
+</div>
