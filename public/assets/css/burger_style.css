@@ -1,5 +1,5 @@
 body {
-  background-color: aqua;
+  background-color: #ffd700;
 }
 
 .ul__element {
@@ -7,4 +7,15 @@ body {
 }
 li {
   margin: 10px 0;
+}
+#burger-submit {
+  background-color: #c41339;
+}
+
+ul.ba {
+  list-style-type: none;
+}
+.jumbotron {
+  background-image: url("../img/burgers.jpg");
+  background-size: cover;
 }

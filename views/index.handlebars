@@ -7,21 +7,21 @@
 
   <div class = "row">
     <div class="col-md-6 col-sm-12">
-    <h2>Devoured Burgers</h2>
-<ul>
+    <h2 class="text-center">Devoured Burgers</h2>
+<ol>
   
   {{#each burger_name}}
   {{#if devoured}}
-  <li>
+  <li class = "list-group-item">
   {{burger_name}}
   </li>
   {{/if}}
   {{/each}}
  
-</ul>
+</ol>
 </div>
 <div class="col-md-6 col-sm-12">
-<h2>Not Devoured Burgers</h2>
+<h2 class="text-center">Not Devoured Burgers</h2>
 
 <ul>
 
@@ -32,10 +32,13 @@
   
   {{/unless}}
   {{/each}}
-  
+  <br>
 </ul>
 </div>
 </div>
+<div class='row'>
+  <div class='col-4'></div>
+  <div class="col-4" id='burger-submit'>
 <h2>Add a Burger</h2>
 <form class="create-form">
 
@@ -46,6 +49,9 @@
 
   
 
-  <button type="submit">Add A Burger</button>
+  <button class="btn btn-success" type="submit">Add A Burger</button>
 </form>
+<br>
+</div>
+</div>
 </div>
