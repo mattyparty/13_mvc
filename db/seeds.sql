@@ -5,5 +5,3 @@ VALUES
  ("cheese", true )
 ,("bacon", true )
 ,("turkey", false )
-,("chicken", false )
-,("rancy", false );
