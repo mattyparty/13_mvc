@@ -20,7 +20,7 @@ I had to lean heavily on the Cats MVC from class. But after completing it if fee
 
 [Repo Location](https://github.com/mattyparty/13_mvc)
 
-[Heroku Deployment](https://github.com/mattyparty/13_mvc)
+[Heroku Deployment](https://pure-mountain-33562.herokuapp.com/)
 
 # Installation
 
